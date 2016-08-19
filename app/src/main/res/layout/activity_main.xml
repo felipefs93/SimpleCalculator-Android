@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="Put two number and select an operator"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editTextNumber1"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:hint="First number" />
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/editTextNumber2"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:hint="Second number" />
@@ -52,25 +52,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+"
-            android:id="@+id/button" />
+            android:id="@+id/btnAdd" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
-            android:id="@+id/button2" />
+            android:id="@+id/btnSubtract" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
-            android:id="@+id/button3" />
+            android:id="@+id/btnMultiply" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
-            android:id="@+id/button4" />
+            android:id="@+id/btnDivide" />
     </LinearLayout>
 
 </LinearLayout>
