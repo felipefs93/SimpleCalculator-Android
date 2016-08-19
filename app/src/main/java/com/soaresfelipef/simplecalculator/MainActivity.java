@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     public Button btnSubtract;
     public Button btnMultiply;
     public Button btnDivide;
+    public Double result;
+    public Double number1;
+    public Double number2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,32 +33,38 @@ public class MainActivity extends AppCompatActivity {
         btnSubtract = (Button) findViewById(R.id.btnSubtract);
         btnMultiply = (Button) findViewById(R.id.btnMultiply);
         btnDivide = (Button) findViewById(R.id.btnDivide);
+        number1 = Double.parseDouble(editTextNumber1.getText().toString());
+        number2 = Double.parseDouble(editTextNumber2.getText().toString());
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+                result = number1 + number2;
             }
         });
 
         btnSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+                result = number1 - number2;
             }
         });
 
         btnMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+                result = number1 * number2;
             }
         });
 
         btnDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+                result = number1 / number2;
             }
         });
     }
