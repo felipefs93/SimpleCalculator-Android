@@ -28,19 +28,28 @@ public class MainActivity extends AppCompatActivity {
 
         editTextNumber1 = (EditText) findViewById(R.id.editTextNumber1);
         editTextNumber2 = (EditText) findViewById(R.id.editTextNumber2);
-        textViewResult = (TextView) findViewById(R.id.textView);
+        textViewResult = (TextView) findViewById(R.id.textViewResult);
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnSubtract = (Button) findViewById(R.id.btnSubtract);
         btnMultiply = (Button) findViewById(R.id.btnMultiply);
         btnDivide = (Button) findViewById(R.id.btnDivide);
-        number1 = Double.parseDouble(editTextNumber1.getText().toString());
-        number2 = Double.parseDouble(editTextNumber2.getText().toString());
+
+
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+
+                if((editTextNumber1.getText().length() > 0) && (editTextNumber2.getText().length() > 0)) {
+                    number1 = Double.parseDouble(editTextNumber1.getText().toString());
+                    number2 = Double.parseDouble(editTextNumber2.getText().toString());
+                }else{
+                    Toast.makeText(MainActivity.this,"Put a number in both edit texts", Toast.LENGTH_LONG);
+                }
+
                 result = number1 + number2;
+                textViewResult.setText(result.toString());
             }
         });
 
@@ -48,7 +57,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+
+                if((editTextNumber1.getText().length() > 0) && (editTextNumber2.getText().length() > 0)) {
+                    number1 = Double.parseDouble(editTextNumber1.getText().toString());
+                    number2 = Double.parseDouble(editTextNumber2.getText().toString());
+                }else{
+                    Toast.makeText(MainActivity.this,"Put a number in both edit texts", Toast.LENGTH_LONG);
+                }
+
                 result = number1 - number2;
+                textViewResult.setText(result.toString());
             }
         });
 
@@ -56,7 +74,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+
+                if((editTextNumber1.getText().length() > 0) && (editTextNumber2.getText().length() > 0)) {
+                    number1 = Double.parseDouble(editTextNumber1.getText().toString());
+                    number2 = Double.parseDouble(editTextNumber2.getText().toString());
+                }else{
+                    Toast.makeText(MainActivity.this,"Put a number in both edit texts", Toast.LENGTH_LONG);
+                }
+
                 result = number1 * number2;
+                textViewResult.setText(result.toString());
             }
         });
 
@@ -64,7 +91,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"The add button was clicked", Toast.LENGTH_LONG).show();
+
+                if((editTextNumber1.getText().length() > 0) && (editTextNumber2.getText().length() > 0)) {
+                    number1 = Double.parseDouble(editTextNumber1.getText().toString());
+                    number2 = Double.parseDouble(editTextNumber2.getText().toString());
+                }else{
+                    Toast.makeText(MainActivity.this,"Put a number in both edit texts", Toast.LENGTH_LONG);
+                }
+
                 result = number1 / number2;
+                textViewResult.setText(result.toString());
             }
         });
     }
